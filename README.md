@@ -1,4 +1,4 @@
-# Smart Notes from Screenshots
+# VISION NOTE AI
 
 A web application that helps students generate clean, readable notes from screenshots of lecture slides, handwritten notes, or YouTube video snapshots.
 
