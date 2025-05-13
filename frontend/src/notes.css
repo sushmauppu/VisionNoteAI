@@ -1,0 +1,188 @@
+/* notes.css - Styling for the notes content with the new theme */
+
+/* General Styles for Notes Content */
+.notes-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(135deg, #8a4baf 0%, #5d42a9 100%);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Styles */
+.notes-container h1 {
+  font-size: 2rem;
+  color: #E0E7FF;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid #5d42a9;
+  padding-bottom: 0.5rem;
+}
+
+.notes-container h2 {
+  font-size: 1.75rem;
+  color: #E0E7FF;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.notes-container h3 {
+  font-size: 1.5rem;
+  color: #6366F1;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+/* Paragraph Styling */
+.notes-container p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #F9FAFB;
+}
+
+/* List Styling */
+.notes-container ul, .notes-container ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.notes-container ul li,
+.notes-container ol li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  color: #F9FAFB;
+}
+
+/* Bullet List */
+.notes-container ul li::before {
+  content: "•";
+  color: #6366F1;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Numbered List */
+.notes-container ol li::before {
+  content: counter(item) ".";
+  color: #6366F1;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1.5em;
+}
+
+/* Blockquote Styling */
+.notes-container blockquote {
+  border-left: 4px solid #A5B4FC;
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  color: #D1D5DB;
+  background-color: #2D3748;
+}
+
+/* Code Styling */
+.notes-container code {
+  background-color: #F3F4F6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #111827;
+}
+
+/* Preformatted Code Block Styling */
+.notes-container pre {
+  background-color: #F3F4F6;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  color: #111827;
+}
+
+.notes-container pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Table Styling */
+.notes-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.notes-container table th {
+  background-color: #6366F1;
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #C7D2FE;
+  color: #FFFFFF;
+}
+
+.notes-container table td {
+  padding: 0.75rem;
+  border: 1px solid #E5E7EB;
+  color: #111827;
+}
+
+.notes-container table tr:nth-child(even) td {
+  background-color: #F9FAFB;
+}
+
+/* Highlighted Note Styles */
+.important-note {
+  background-color: #FEF3C7;
+  border-left: 4px solid #F59E0B;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #111827;
+}
+
+.definition {
+  background-color: #E0E7FF;
+  border-left: 4px solid #6366F1;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #111827;
+}
+
+.example {
+  background-color: #D1FAE5;
+  border-left: 4px solid #10B981;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #111827;
+}
+
+.warning {
+  background-color: #FEE2E2;
+  border-left: 4px solid #EF4444;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #111827;
+}
+
+/* Animations for content loading */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.notes-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
